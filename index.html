@@ -80,34 +80,52 @@
         </section>
 
         <section>
-            <h2>Unit Test with Jasmine</h2>
+            <h3>Purpose of Unit Test</h3>
+
+            <ul>
+                <li class="fragment">What to implement/Focus</li>
+                <li class="fragment">Is it still working?</li>
+                <li class="fragment">Documentation</li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h3>Example Unit Test with Jasmine</h3>
             <pre><code class="javascript">
-            describe('Testing myService', function () {
+                describe('Testing myService', function () {
 
-                var myService;
-                var aDependencyMock;
+                    var myService;
+                    var aDependencyMock;
 
-                beforeEach(function () {
-                    aDependencyMock = {
-                        someFunction: function () {
-                        }
-                    };
-                    module('myService');
+                    beforeEach(function () {
+                        aDependencyMock = {
+                            someFunction: function () {
+                            }
+                        };
+                        module('myService');
 
-                    module(function ($provide) {
-                        $provide.value('aDependency', aDependencyMock);
+                        module(function ($provide) {
+                            $provide.value('aDependency', aDependencyMock);
+                        });
+                        inject(function (_myService_) {
+                            myService = _myService_;
+                        });
                     });
-                    inject(function (_myService_) {
-                        myService = _myService_;
+
+                    it('service should be defined', function () {
+                        expect(myService).toBeDefined();
                     });
-                });
 
-                it('service should be defined', function () {
-                    expect(myService).toBeDefined();
                 });
-
-            });
             </code></pre>
+
+        </section>
+
+        <section>
+            <h3>Directive Test</h3>
+
+            <p>Small part of the app tested through the DOM</p>
 
         </section>
 
