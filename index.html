@@ -2,140 +2,233 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+  <title>reveal.js - The HTML Presentation Framework</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
 
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-    <script>
-        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
-    </script>
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+  <script>
+    document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+  </script>
 </head>
 
 <body>
 
 <div class="reveal">
 
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
-        <section>
-            <h2>Testing with AngularJS</h2>
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+  <section>
+    <h2>Testing with AngularJS</h2>
 
-            <p>
-                <small>By Andi Marek / <a href="http://twitter.com/andimarek">@andimarek</a></small>
+    <p>
+      <small>By Andi Marek / <a href="http://twitter.com/andimarek">@andimarek</a></small>
 
-            <blockquote>errare humanum est</blockquote>
+    <blockquote>errare humanum est</blockquote>
 
-            </p>
-        </section>
+    </p>
+  </section>
 
 
-        <section>
-            <h2>Overview</h2>
+  <section>
+    <h2>Overview</h2>
 
-            <ul>
-                <li>Test Pyramid</li>
-                <li>Tools</li>
-                <li>Unit Testing</li>
-                <li>Directive Testing</li>
-                <li>E2E Testing</li>
-            </ul>
+    <ul>
+      <li>Test Pyramid</li>
+      <li>Tools</li>
+      <li>Unit Testing</li>
+      <li>Directive Testing</li>
+      <li>E2E Testing</li>
+    </ul>
 
-            <aside class="notes">
-                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-            </aside>
-        </section>
+    <aside class="notes">
+      Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+    </aside>
+  </section>
 
-        <section>
-            <h2>General Test Pyramid</h2>
-            <p>Based on Return on investment (ROI)</p>
-            <p><img src="images/pyramid.png" alt=""/></p>
-            <small>Image by Martin Fowler</small>
-        </section>
-        <section>
-            <h2>AngularJS Test Pyramid</h2>
-        </section>
+  <section>
+    <h2>General Test Pyramid</h2>
 
-        <section>
-            <h2>Tools</h2>
+    <p>Based on Return on investment (ROI)</p>
 
-            <ul>
-                <li class="fragment"><b>Build:</b> Grunt</li>
-                <p/>
-                <li class="fragment"><b>Test Runner:</b> Karma</li>
-                <p/>
-                <li class="fragment"><b>Test Framework:</b> Jasmine</li>
-                <p/>
-                <li class="fragment"><b>Headless Browser:</b> PhantomJS</li>
-            </ul>
-        </section>
+    <p><img src="images/pyramid.png" alt=""/></p>
+    <small>Image by Martin Fowler</small>
+  </section>
+  <section>
+    <h2>AngularJS Test Pyramid</h2>
 
-        <section>
-            <h3>Purpose of Unit Test</h3>
+    <p><img src="images/angular-pyramid-alpha.png" alt=""/></p>
+  </section>
 
-            <ul>
-                <li class="fragment">What to implement/Focus</li>
-                <li class="fragment">Is it still working?</li>
-                <li class="fragment">Documentation</li>
-            </ul>
+  <section>
+    <h2>Tools</h2>
 
-        </section>
+    <ul>
+      <li class="fragment"><b>Build:</b> Grunt</li>
+      <p/>
+      <li class="fragment"><b>Test Runner:</b> Karma</li>
+      <p/>
+      <li class="fragment"><b>Test Framework:</b> Jasmine</li>
+      <p/>
+      <li class="fragment"><b>Headless Browser:</b> PhantomJS</li>
+    </ul>
+  </section>
 
-        <section>
-            <h3>Example Unit Test with Jasmine</h3>
+  <section>
+    <h3>Purpose of Unit Tests</h3>
+
+    <ul>
+      <li class="fragment">What to implement/Focus</li>
+      <li class="fragment">Is it still working?</li>
+      <li class="fragment">Documentation</li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h3>Example Unit Test</h3>
             <pre><code class="javascript">
-                describe('Testing myService', function () {
+              describe('Testing myService', function () {
 
-                    var myService;
-                    var aDependencyMock;
+                var myService;
+                var aDependencyMock;
 
-                    beforeEach(function () {
-                        aDependencyMock = {
-                            someFunction: function () {
-                            }
-                        };
-                        module('myService');
+                beforeEach(function () {
+                  aDependencyMock = {
+                    someFunction: function () {
+                    }
+                  };
+                  module('myModule.myService');
 
-                        module(function ($provide) {
-                            $provide.value('aDependency', aDependencyMock);
-                        });
-                        inject(function (_myService_) {
-                            myService = _myService_;
-                        });
-                    });
-
-                    it('service should be defined', function () {
-                        expect(myService).toBeDefined();
-                    });
-
+                  module(function ($provide) {
+                    $provide.value('aDependency', aDependencyMock);
+                  });
+                  inject(function (_myService_) {
+                    myService = _myService_;
+                  });
                 });
+
+                it('service should be defined', function () {
+                  expect(myService).toBeDefined();
+                });
+
+              });
             </code></pre>
 
-        </section>
+  </section>
 
-        <section>
-            <h3>Directive Test</h3>
+  <section>
+    <h3>Directive Tests</h3>
 
-            <p>Small part of the app tested through the DOM</p>
+    <p>Small part of the app tested through the DOM</p>
 
-        </section>
+    <p>No Backend Calls or external dependencies</p>
+
+  </section>
+
+  <section>
+    <h3>Example Directive Test </h3>
+            <pre><code class="javascript">
+              describe('Directive Test:', function () {
+
+                var element;
+                var $scope;
+
+                beforeEach(function () {
+                  module('myModule.myDirectice');
+                  inject(function ($compile, $rootScope) {
+                    $scope = $rootScope.$new();
+                    element = angular.element('&lt;myDirective/&gt;');
+                    $compile(element)($scope);
+                    $scope.$digest();
+                  });
+                });
+
+                it('now test element', function () {
+                });
+              });
+            </code></pre>
+  </section>
+
+  <section>
+
+    <h3>Testing against the DOM</h3>
+
+      <pre><code>
+        it('should call methodX on click', function () {
+          spyOn($scope, 'methodX');
+          element.find('.button').click();
+          expect($scope.methodX).toBeCalled();
+        });
+      </code></pre>
+
+  </section>
+
+  <section>
+    <h3>E2E (Scenario) Tests</h3>
+
+    <ul>
+      <li>Black box application Tests</li>
+      <li>Sometimes tricky to set up</li>
+      <li>Jasmine like syntax</li>
+      <li>Tip: Mock the Backend with Node.js with no external dependencies</li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h3>Test Architecture for E2E Tests</h3>
+
+    <p><img src="images/e2e-backend.png" alt=""/></p>
+
+  </section>
+
+  <section>
+    <h3>E2E Test Example</h3>
+
+      <pre><code>
+        describe('E2E Test', function () {
+
+          beforeEach(function () {
+            browser().navigateTo('/url/to/test/index.html');
+          });
+
+          it("should show a dialog", function () {
+            element('.show-dialog').click();
+            expect(element(".dialog").count()).toBe(1);
+          });
+        });
+      </code></pre>
+  </section>
+
+  <section>
+    <h3>Conclusion/Experience</h3>
+
+    <ul>
+      <li>Good Test Support by Angular</li>
+      <li>Prefer the bottom of the pyramid</li>
+      <li>Very fast feedback cycle with Karma</li>
+      <li>Complete build is also very quick</li>
+    </ul>
+
+  </section>
 
 
-    </div>
+</div>
 
 </div>
 
@@ -144,39 +237,39 @@
 
 <script>
 
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-            { src: 'lib/js/classList.js', condition: function () {
-                return !document.body.classList;
-            } },
-            { src: 'plugin/markdown/marked.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            } },
-            { src: 'plugin/markdown/markdown.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            } },
-            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                hljs.initHighlightingOnLoad();
-            } },
-            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
-                return !!document.body.classList;
-            } },
-            { src: 'plugin/notes/notes.js', async: true, condition: function () {
-                return !!document.body.classList;
-            } }
-        ]
-    });
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function () {
+        return !document.body.classList;
+      } },
+      { src: 'plugin/markdown/marked.js', condition: function () {
+        return !!document.querySelector('[data-markdown]');
+      } },
+      { src: 'plugin/markdown/markdown.js', condition: function () {
+        return !!document.querySelector('[data-markdown]');
+      } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+        hljs.initHighlightingOnLoad();
+      } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+        return !!document.body.classList;
+      } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function () {
+        return !!document.body.classList;
+      } }
+    ]
+  });
 
 </script>
 
