@@ -32,75 +32,75 @@
 
 <!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
-  <section>
-    <h2>Testing with AngularJS</h2>
+<section>
+  <h2>Testing with AngularJS</h2>
 
-    <p>
-      <small>By Andi Marek / <a href="http://twitter.com/andimarek">@andimarek</a></small>
+  <p>
+    <small>By Andi Marek / <a href="http://twitter.com/andimarek">@andimarek</a></small>
 
-    <blockquote>errare humanum est</blockquote>
+  <blockquote>errare humanum est</blockquote>
 
-    </p>
-  </section>
+  </p>
+</section>
 
 
-  <section>
-    <h2>Overview</h2>
+<section>
+  <h2>Overview</h2>
 
-    <ul>
-      <li>Test Pyramid</li>
-      <li>Tools</li>
-      <li>Unit Testing</li>
-      <li>Directive Testing</li>
-      <li>E2E Testing</li>
-    </ul>
+  <ul>
+    <li>Test Pyramid</li>
+    <li>Tools</li>
+    <li>Unit Testing</li>
+    <li>Directive Testing</li>
+    <li>E2E Testing</li>
+  </ul>
 
-    <aside class="notes">
-      Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-    </aside>
-  </section>
+  <aside class="notes">
+    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+  </aside>
+</section>
 
-  <section>
-    <h2>General Test Pyramid</h2>
+<section>
+  <h2>General Test Pyramid</h2>
 
-    <p>Based on Return on investment (ROI)</p>
+  <p>Based on Return on investment (ROI)</p>
 
-    <p><img src="images/pyramid.png" alt=""/></p>
-    <small>Image by Martin Fowler</small>
-  </section>
-  <section>
-    <h2>AngularJS Test Pyramid</h2>
+  <p><img src="images/pyramid.png" alt=""/></p>
+  <small>Image by Martin Fowler</small>
+</section>
+<section>
+  <h2>AngularJS Test Pyramid</h2>
 
-    <p><img src="images/angular-pyramid-alpha.png" alt=""/></p>
-  </section>
+  <p><img src="images/angular-pyramid-alpha.png" alt=""/></p>
+</section>
 
-  <section>
-    <h2>Tools</h2>
+<section>
+  <h2>Tools</h2>
 
-    <ul>
-      <li class="fragment"><b>Build:</b> Grunt</li>
-      <p/>
-      <li class="fragment"><b>Test Runner:</b> Karma</li>
-      <p/>
-      <li class="fragment"><b>Test Framework:</b> Jasmine</li>
-      <p/>
-      <li class="fragment"><b>Headless Browser:</b> PhantomJS</li>
-    </ul>
-  </section>
+  <ul>
+    <li class="fragment"><b>Build:</b> Grunt</li>
+    <p/>
+    <li class="fragment"><b>Test Runner:</b> Karma</li>
+    <p/>
+    <li class="fragment"><b>Test Framework:</b> Jasmine</li>
+    <p/>
+    <li class="fragment"><b>Headless Browser:</b> PhantomJS</li>
+  </ul>
+</section>
 
-  <section>
-    <h3>Purpose of Unit Tests</h3>
+<section>
+  <h3>Purpose of Unit Tests</h3>
 
-    <ul>
-      <li class="fragment">What to implement/Focus</li>
-      <li class="fragment">Is it still working?</li>
-      <li class="fragment">Documentation</li>
-    </ul>
+  <ul>
+    <li class="fragment">What to implement/Focus</li>
+    <li class="fragment">Is it still working?</li>
+    <li class="fragment">Documentation</li>
+  </ul>
 
-  </section>
+</section>
 
-  <section>
-    <h3>Example Unit Test</h3>
+<section>
+  <h3>Example Unit Test</h3>
             <pre><code class="javascript">
               describe('Testing myService', function () {
 
@@ -129,19 +129,21 @@
               });
             </code></pre>
 
-  </section>
+</section>
 
-  <section>
-    <h3>Directive Tests</h3>
+<section>
+  <h3>Directive Tests</h3>
 
-    <p>Small part of the app tested through the DOM</p>
+  <ul>
+    <li>Small part of the app tested through the DOM</li>
+    <li>Integration Test</li>
+    <li>No Backend Calls or external dependencies</li>
+  </ul>
 
-    <p>No Backend Calls or external dependencies</p>
+</section>
 
-  </section>
-
-  <section>
-    <h3>Example Directive Test </h3>
+<section>
+  <h3>Example Directive Test </h3>
             <pre><code class="javascript">
               describe('Directive Test:', function () {
 
@@ -162,11 +164,11 @@
                 });
               });
             </code></pre>
-  </section>
+</section>
 
-  <section>
+<section>
 
-    <h3>Testing against the DOM</h3>
+  <h3>Testing against the DOM</h3>
 
       <pre><code>
         it('should call methodX on click', function () {
@@ -176,29 +178,33 @@
         });
       </code></pre>
 
-  </section>
+</section>
 
-  <section>
-    <h3>E2E (Scenario) Tests</h3>
+<section>
+  <h3>E2E (Scenario) Tests</h3>
 
-    <ul>
-      <li>Black box application Tests</li>
-      <li>Sometimes tricky to set up</li>
-      <li>Jasmine like syntax</li>
-      <li>Tip: Mock the Backend with Node.js with no external dependencies</li>
-    </ul>
+  <ul>
+    <li>Black box application Tests</li>
+    <li>Integrated with Angular: Knows when the app is ready</li>
+    <li>Jasmine like syntax</li>
+    <li>Protractor: Successor based on Webdriver</li>
+  </ul>
 
-  </section>
+</section>
 
-  <section>
-    <h3>Test Architecture for E2E Tests</h3>
+<section>
+  <h3>Example Test Architecture for E2E Tests</h3>
 
-    <p><img src="images/e2e-backend.png" alt=""/></p>
+  <p><img src="images/e2e-backend.png" alt=""/></p>
 
-  </section>
+</section>
 
-  <section>
-    <h3>E2E Test Example</h3>
+<section>
+  TODO: Bild mit Iframe und Node.JS Mock: Static surfing + backend calls
+</section>
+
+<section>
+  <h3>E2E Test Example</h3>
 
       <pre><code>
         describe('E2E Test', function () {
@@ -213,19 +219,30 @@
           });
         });
       </code></pre>
-  </section>
+</section>
 
-  <section>
-    <h3>Conclusion/Experience</h3>
+<section>
+  <h3>Conclusion/Experience</h3>
 
-    <ul>
-      <li>Good Test Support by Angular</li>
-      <li>Prefer the bottom of the pyramid</li>
-      <li>Very fast feedback cycle with Karma</li>
-      <li>Complete build is also very quick</li>
-    </ul>
+  <ul>
+    <li>Good Test Support by Angular</li>
+    <li>Prefer the bottom of the pyramid</li>
+    <li>Very fast feedback cycle with Karma</li>
+    <li>Complete build is also very quick</li>
+  </ul>
 
-  </section>
+</section>
+
+<section>
+  <h3>Thank you</h3>
+
+  <a href="https://github.com/andimarek/angular-testing">github.com/andimarek/angular-testing</a>
+
+  <p></p>
+  <p></p>
+  <a href="http://blog-it.hypoport.de/2013/09/28/angularjs-test-pyramid/">Blog post with more details</a>
+
+</section>
 
 
 </div>
