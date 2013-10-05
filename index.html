@@ -89,12 +89,31 @@
 </section>
 
 <section>
+
+  <h3>UNIT TEST</h3>
+
+  White Box Testing with the smallest possible scope (lines of code)
+
+</section>
+
+<section>
   <h3>Purpose of Unit Tests</h3>
 
   <ul>
     <li class="fragment">What to implement/Focus</li>
     <li class="fragment">Is it still working?</li>
     <li class="fragment">Documentation</li>
+  </ul>
+
+</section>
+
+<section>
+  <h3>Unit Test Setup</h3>
+
+  <ul>
+    <li>Angular Mocks Library</li>
+    <li>Jasmine</li>
+    <li>Karma</li>
   </ul>
 
 </section>
@@ -143,9 +162,24 @@
 </section>
 
 <section>
+  <h3>One Directive is tested</h3>
+  <img src="images/directive-test.jpg" alt=""/>
+</section>
+
+
+<section>
+  <h3>Directive Test Setup</h3>
+  <ul>
+    <li>Angular Mocks Library</li>
+    <li>Jasmine</li>
+    <li>Karma</li>
+  </ul>
+</section>
+
+<section>
   <h3>Example Directive Test </h3>
             <pre><code class="javascript">
-              describe('Directive Test:', function () {
+              describe('Testing myDirective', function () {
 
                 var element;
                 var $scope;
@@ -193,6 +227,15 @@
 </section>
 
 <section>
+  <h3>E2E Test Setup</h3>
+
+  <ul>
+    <li>Angular Scenario Library</li>
+    <li>Karma</li>
+  </ul>
+</section>
+
+<section>
   <h3>Example Test Architecture for E2E Tests</h3>
 
   <p><img src="images/e2e-backend.png" alt=""/></p>
@@ -200,7 +243,9 @@
 </section>
 
 <section>
-  TODO: Bild mit Iframe und Node.JS Mock: Static surfing + backend calls
+  <h3>E2E with Node.JS Backend</h3>
+
+  <img src="images/e2e-node-setup.jpg" alt=""/>
 </section>
 
 <section>
@@ -239,6 +284,7 @@
   <a href="https://github.com/andimarek/angular-testing">github.com/andimarek/angular-testing</a>
 
   <p></p>
+
   <p></p>
   <a href="http://blog-it.hypoport.de/2013/09/28/angularjs-test-pyramid/">Blog post with more details</a>
 
