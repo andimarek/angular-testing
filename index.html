@@ -64,6 +64,7 @@
   <h2>General Test Pyramid</h2>
 
   <p>Based on Return on investment (ROI)</p>
+  <p>From Top to Bottom: Less integrated</p>
 
   <p><img src="images/pyramid.png" alt=""/></p>
   <small>Image by Martin Fowler</small>
@@ -155,7 +156,6 @@
                 it('service should be defined', function () {
                   expect(myService).toBeDefined();
                 });
-
               });
             </code></pre>
 
@@ -165,7 +165,9 @@
   <h3>Directive Tests</h3>
 
   <ul>
-    <li class="fragment">Small part of the app tested through the DOM</li>
+    <li class="fragment">A part of the app tested through the DOM</li>
+    <p/>
+    <li class="fragment">A part of the app = Directive</li>
     <p/>
     <li class="fragment">Integration Test</li>
     <p/>
