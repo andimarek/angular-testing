@@ -98,7 +98,9 @@
     <p/>
     <li class="fragment">Testing the smallest possible scope (lines of code).</li>
     <p/>
-    <li class="fragment">Testing in Isolation: Dependencies are mocked.</li>
+    <li class="fragment">Best way to write Unit Tests: Test Driven Development (TDD).</li>
+    <p/>
+    <li class="fragment">Principle: Testing in Isolation -> Dependencies are mocked.</li>
   </ul>
 
 
@@ -225,7 +227,7 @@
         it('should call methodX on click', function () {
           spyOn($scope, 'methodX');
           element.find('.button').click();
-          expect($scope.methodX).toBeCalled();
+          expect($scope.methodX).toHaveBeenCalled();
         });
       </code></pre>
 
@@ -276,7 +278,7 @@
         describe('E2E Test', function () {
 
           beforeEach(function () {
-            browser().navigateTo('/url/to/test/index.html');
+            browser().navigateTo('http://localhost/url/to/test/index.html');
           });
 
           it("should show a dialog", function () {
@@ -307,6 +309,8 @@
 
   <a href="http://andimarek.github.io/angular-testing">andimarek.github.io/angular-testing</a>
 
+  <p></p>
+  <a href="https://github.com/hypoport/node-config-ngscenario-dsl/tree/master/examples">E2E Test Example</a>
   <p></p>
 
   <p></p>
